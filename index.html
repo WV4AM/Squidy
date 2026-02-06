@@ -3,23 +3,29 @@
 <head>
   <title>Gotcha</title>
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
       background: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       flex-direction: column;
       font-family: sans-serif;
     }
+
     h1 {
-      font-size: 120px;  /* Make the text huge */
+      font-size: 20vw;  /* scale text relative to viewport width */
       margin: 0;
+      text-align: center;
     }
+
     img {
-      max-width: 1000px;   /* Make the GIF much bigger */
-      max-height: 800px;  /* Optional: limit height so it fits on screen */
-      margin-top: 40px;
+      width: 80vw;      /* GIF fills 80% of viewport width */
+      height: auto;      /* maintain aspect ratio */
+      margin-top: 2vh;
     }
   </style>
 </head>
