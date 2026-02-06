@@ -17,17 +17,28 @@
       font-family: sans-serif;
     }
 
+    /* Default: large computer screens */
     h1 {
-      font-size: clamp(40px, 15vw, 200px); /* scales with screen, min 40px, max 200px */
+      font-size: clamp(40px, 15vw, 200px);
       line-height: 1;
       text-align: center;
       margin: 0;
     }
 
     img {
-      width: clamp(100px, 50vw, 800px); /* scales with screen, min 100px, max 800px */
+      width: clamp(100px, 50vw, 800px);
       height: auto;
       margin-top: 2vh;
+    }
+
+    /* Media query: phones / small screens */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: clamp(60px, 25vw, 200px); /* bigger on phones */
+      }
+      img {
+        width: clamp(150px, 70vw, 800px);    /* bigger on phones */
+      }
     }
   </style>
 </head>
